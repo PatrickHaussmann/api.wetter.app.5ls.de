@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/", "destination": "/404" },
+    { "source": "/:file*", "destination": "/api/:file" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers" : [
+        {
+          "key" : "Access-Control-Allow-Origin",
+          "value" : "https://wetter.app.5ls.de"
+        }
+      ]
+    },
+  ]
+}
