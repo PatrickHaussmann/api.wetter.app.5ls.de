@@ -23,11 +23,8 @@ module.exports = async (req, res) => {
     dawn            dawn (morning nautical twilight ends, morning civil twilight starts)
     */
 
-    if (!req.query.lat || !req.query.lon)
-        res.json({ error: "invalidParameters" });
-
-    let lat = parseFloat(req.query.lat);
-    let lon = parseFloat(req.query.lon);
+    let lat = req.query.lat ? parseFloat(req.query.lat) : 0;
+    let lon = req.query.lon ? parseFloat(req.query.lon) : 0;
     let date = req.query.date ? new Date(req.query.date) : new Date();
 
     date.setHours(12, 0, 0, 0);
