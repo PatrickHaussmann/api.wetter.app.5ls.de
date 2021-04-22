@@ -1,15 +1,4 @@
 {
     "version": 2,
-    "rewrites": [{ "source": "/", "destination": "/api/suncalc" }],
-    "headers": [
-        {
-            "source": "/(.*)",
-            "headers": [
-                {
-                    "key": "Access-Control-Allow-Origin",
-                    "value": "https://wetter.app.5ls.de"
-                }
-            ]
-        }
-    ]
+    "rewrites": [{ "source": "/", "destination": "/api/suncalc" }]
 }
